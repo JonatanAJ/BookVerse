@@ -1,0 +1,181 @@
+/* Gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control{
+  width: 300px;
+}
+.row {
+  margin: 0;
+}
+
+.container {
+  padding: 70px 0;
+}
+
+p, li {
+  color: #757575;
+  font-size: 14px;
+}
+
+
+
+/* Barra de navegação */
+header, .navbar {
+  background-color: #FDD900;
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 85px;
+}
+
+.navbar-brand {
+  padding: 0;
+  color: #0e0e0e;
+}
+
+.navbar-brand:hover {
+  color: #FFF;
+}
+
+#navbar-links a {
+  height: 100%;
+  color: #0e0e0e;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #FFF;
+}
+
+.text-header{
+  padding: 2px;
+  text-align: center;
+  color: #F1F1F1;
+  background-color: #0e0e0e;
+
+}
+
+
+/* Slider */
+
+.container-fluid {
+  padding: 0;
+}
+
+.text-navbar{
+
+  background-color: #0e0e0e;
+  padding: 1px;
+  color: #F1F1F1;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+  height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+  top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+  font-size: 500  px;
+  margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 100px;
+  color: #FFF;
+}
+
+.carousel-control-prev-icon {
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  color: #0a0a0a;
+}
+
+.carousel-indicators .active {
+  background-color: #f6d831 ;
+}
+
+/*area do carrosel de cards*/
+section h2{
+  padding-left: 100px;
+  padding-top: 40px;
+}
+
+.carousel-control-next-icon{
+  
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  color: #0e0e0e;
+}
+
+.card .img-wrapper{
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-area img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+@media (min-width: 576px) {
+  .card-area .carousel-inner {
+    display: flex;
+  }
+  .card-area .carousel-item {
+    margin-right: 0;
+    flex: 0 0 calc(100%/3);
+    display: block;
+  }
+
+  .img-wrapper{
+  height: 23vw;
+}
+
+}
+.card{
+  align-items: center;
+  text-align: center;
+  margin: 0 .5em;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  
+}
+
+.card-area .carousel-inner{
+  padding: 1em;
+}
+
+.card-area .carousel-control-prev .carousel-control-next{
+  width: 6vh;
+  height: 6vh;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+
+}
+
