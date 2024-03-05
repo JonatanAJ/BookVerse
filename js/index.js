@@ -54,3 +54,7 @@ function updateCardContainer() {
   const newTransformValue = -currentIndex * cardWidth + 'px';
   cardContainer.style.transform = 'translateX(' + newTransformValue + ')';
 }
+
+
+
+

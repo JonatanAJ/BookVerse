@@ -189,9 +189,21 @@ section h2{
   transition: transform 0.5s ease;
 }
 
-.card {
+.card { 
+  text-align: center;
+  align-items: center;
   overflow: hidden;
   flex: 0 0 auto;
   width: 300px;
   margin-right: 15px;
 }
+
+
+
+@media (max-width: 768px) {
+  .btn {
+    transform: translateX(0);
+  }
+}
+
+

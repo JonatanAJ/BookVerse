@@ -45,7 +45,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" id="home-menu" href="#"> <i class="fi fi-rr-user"></i>Entrar</a>
+            <a class="nav-item nav-link" id="home-menu" href="telaLogin.html"> <i class="fi fi-rr-user"></i>Entrar</a>
             <a class="nav-item nav-link" id="about-menu" href="#"> <i class="fi fi-rr-shopping-cart"></i>Carrinho</a>
             <a class="nav-item nav-link" id="services-menu" href="#"><i class="fi fi-rs-heart"></i>Favoritos</a>
           </div>
@@ -88,9 +88,9 @@
   </div>
   <!--area dos cards-->
   <section>
-    <h2>Livros</h2>
+    <h2>Mais Vendidos</h2>
     <div>
-      <div class="rounded p-5 overflow-hidden">
+      <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
         <div id="card-container">
           <div class="card card-item-cr" >
             <div class="card-header">
@@ -197,14 +197,15 @@
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              <button type="button" class="btn btn-primary">Compre</button>
+              
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" onclick="previousCard()">
+        <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
           <i class="fi fi-rr-arrow-small-left"></i>
         </button>
-        <button class="btn btn-primary" style="align-items: end;" onclick="nextCard()">
+        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
           <i class="fi fi-rr-arrow-small-right"></i>
         </button>
       </div>
