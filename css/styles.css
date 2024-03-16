@@ -104,7 +104,13 @@ header, .navbar {
 
 .carousel-control-prev-icon {
   border-radius: 5px;
-  background-color: #e8e8e8;
+  background-color: #999999;
+  color: #0a0a0a;
+}
+
+.carousel-control-next-icon {
+  border-radius: 5px;
+  background-color: #999999;
   color: #0a0a0a;
 }
 
@@ -113,10 +119,12 @@ header, .navbar {
 }
 
 /*area do carrosel de cards*/
+
 section h2{
   padding-left: 100px;
   padding-top: 40px;
 }
+
 /* 
 .carousel-control-next-icon{
   
@@ -197,6 +205,12 @@ section h2{
   width: 300px;
   margin-right: 15px;
 }
+button{
+  background-color: #FDD900;
+}
+.bnt{
+  background-color: #FDD900;
+}
 
 
 
@@ -205,5 +219,13 @@ section h2{
     transform: translateX(0);
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+height: 100px;
+  }
+}
+
+
 
 

@@ -1,0 +1,84 @@
+/* Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form-control{
+    width: 300px;
+  }
+  .row {
+    margin: 0;
+  }
+  
+  .container {
+    padding: 70px 0;
+  }
+  
+  p, li {
+    color: #757575;
+    font-size: 14px;
+  }
+
+header, .navbar {
+    background-color: #FDD900;
+  }
+  
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  
+  #logo {
+   width: 89px;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+    color: #0e0e0e;
+  }
+  
+  .navbar-brand:hover {
+    color: #FFF;
+  }
+  
+  #navbar-links a {
+    height: 100%;
+    color: #0e0e0e;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+  
+  .nav-item.active {
+    border-bottom: 3px solid #FFF;
+  }
+  
+  .text-header{
+    padding: 2px;
+    text-align: center;
+    color: #F1F1F1;
+    background-color: #0e0e0e;
+  
+  }
+
+#quantidade{
+    text-align: center;
+    width: 50px;
+    border-radius: 10px;
+}
+table th{
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+}
+
+  input:invalid {
+    border: 2px solid red;
+  }
+
+  header {
+    padding: 15px 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+  }
