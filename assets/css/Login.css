@@ -4,6 +4,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+header, .navbar {
+    background-color: #FDD900;
+  }
+  
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  #logo {
+    width: 85px;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+    color: #0e0e0e;
+  }
+  
+  .navbar-brand:hover {
+    color: #FFF;
+  }
+  
+  #navbar-links a {
+    height: 100%;
+    color: #0e0e0e;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+  
+  .nav-item.active {
+    border-bottom: 3px solid #FFF;
+  }
+  
+  .text-header{
+    padding: 2px;
+    text-align: center;
+    color: #F1F1F1;
+    background-color: #0e0e0e;
+  
+  }
 body {
    
     font-family: 'Open Sans', sans-serif;
