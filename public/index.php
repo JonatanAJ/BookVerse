@@ -1,3 +1,10 @@
+<?php 
+include('../app/config.php');
+include('../app/result_livros.php');
+session_start();
+
+
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -5,8 +12,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BookVerse</title>
-  <link rel="icon" href="img/logoicone.ico" type="image/png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="../assets/img/logoicone.ico" type="image/png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 
   <!--fonte-->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
@@ -31,8 +38,8 @@
       <!-- add essa class -->
 
       <nav class="navbar navbar-expand-lg  navbar-dark">
-        <a class="navbar-brand" href="index.html">
-          <img id="logo" src="img/logo2.png" alt="ByteTech">
+        <a class="navbar-brand" href="index.php">
+          <img id="logo" src="../assets/img/logo2.png" alt="BookVerse">
         </a>
 
         <form class="d-flex" role="search">
@@ -45,9 +52,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" id="home-menu" href="telaLogin.html"> <i class="fi fi-rr-user"></i>Entrar</a>
-            <a class="nav-item nav-link" id="about-menu" href="carrinho.html"> <i class="fi fi-rr-shopping-cart"></i>Carrinho</a>
-            <a class="nav-item nav-link" id="services-menu" href="#"><i class="fi fi-rs-heart"></i>Favoritos</a>
+            <a class="nav-item nav-link" id="home-menu" href="telaLogin.php"> <i class="fi fi-rr-user"></i>Entrar</a>
+            <a class="nav-item nav-link" id="about-menu" href="carrinho.php"> <i class="fi fi-rr-shopping-cart"></i>Carrinho</a>
+            <a class="nav-item nav-link" id="services-menu" href="perfil.php"><i class="fi fi-rs-heart"></i>Meu perfil</a>
           </div>
         </div>
       </nav>
@@ -66,13 +73,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/book2.png" class="d-block w-100" alt="...">
+        <img src="../assets/img/slide1.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/book3.webp" class="d-block w-100" alt="...">
+        <img src="../assets/img/book3.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/book5.webp" class="d-block w-100" alt="...">
+        <img src="../assets/img/book4.png" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -87,113 +94,121 @@
     </button>
   </div>
   <!--area dos cards-->
+
+  
+    
+    <?php 
+
+    
+    ?>
   <section>
     <h2>Mais Vendidos</h2>
     <div>
+      
       <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
-        <div id="card-container">
+        <div id="card-container" class="overflow-x-auto">
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa1.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
+              <img src="../assets/img/capa1.webp" class="card-img-top" alt="...">
+              <p class="fw-bold"></p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+            <a href="?adicionar=<?php echo $key?><button type="button" class="btn btn-primary">Compre</button></a>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa10.jpg" class="card-img-top" alt="...">
+              <img src="../assets/img/capa10.jpg" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa11.jpg" class="card-img-top" alt="...">
+              <img src="../assets/img/capa11.jpg" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa8.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa8.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa9.jpg" class="card-img-top" alt="...">
+              <img src="../assets/img/capa9.jpg" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa7.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa7.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa1.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa1.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa3.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa3.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa6.jpg" class="card-img-top" alt="...">
+              <img src="../assets/img/capa6.jpg" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa3.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa3.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa2.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa2.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+              <button type="button" class="btn btn-primary" type="submit">Compre</button>
             </div>
           </div>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa4.webp" class="card-img-top" alt="...">
+              <img src="../assets/img/capa4.webp" class="card-img-top" alt="...">
               <p class="fw-bold">titulo do card</p class="fw-bold">
             </div>
             <div class="card-body">
@@ -202,136 +217,46 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
+        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard('card-container', 'card-item-cr')">
           <i class="fi fi-rr-arrow-small-left"></i>
         </button>
-        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
+        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="passCard('next','card-container', 'card-item-cr')">
           <i class="fi fi-rr-arrow-small-right"></i>
-        </button>
+        </button> -->
       </div>
-    </div>
+    </div> 
+   
   </section>
+
+
+  
+  
   <section>
     <h2>HQ's e Mangas</h2>
     <div>
       <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
-        <div id="card-container">
+        <div id="card-container" class="overflow-x-auto">
+          <?php 
+           foreach ($resultado_mangas as $row_mangas) {
+          ?>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="img/capa1.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
+              <img src="<?php echo $row_mangas['Imagem_capa']; ?>" class="card-img-top img" alt="...">
+              <p class="fw-bold"><?php echo $row_mangas['Titulo']; ?></p class="fw-bold">
+              <p class="fw-bold"><?php echo $row_mangas['Preco']; ?></p class="fw-bold">
             </div>
             <div class="card-body">
-              <p>Desrição</p>
+             <button type="button" class="btn btn-primary">Compre</button>
             </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa10.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa11.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa8.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa9.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa7.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa1.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa3.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa6.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa3.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa2.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <p>Desrição</p>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="img/capa4.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary">Compre</button>
-              
-            </div>
-          </div>
+          </div><?php }?>
+         
         </div>
-        <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
+        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
           <i class="fi fi-rr-arrow-small-left"></i>
         </button>
         <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
           <i class="fi fi-rr-arrow-small-right"></i>
-        </button>
+        </button> -->
       </div>
     </div>
   </section>
@@ -343,7 +268,7 @@
   </footer>
 
 
-  <script src='js/index.js'></script>
+  <script src='../assets/js/index.js'></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
