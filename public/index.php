@@ -101,131 +101,34 @@ session_start();
 
     
     ?>
-  <section>
-    <h2>Mais Vendidos</h2>
+ <section>
+    <h2>Ficçào Juvenil e Romance</h2>
     <div>
-      
       <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
         <div id="card-container" class="overflow-x-auto">
+          <?php 
+           foreach ($resultado_romance_juvenil as $row_romance_juvenil) {
+          ?>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="../assets/img/capa1.webp" class="card-img-top" alt="...">
-              <p class="fw-bold"></p class="fw-bold">
+              <img src="<?php echo $row_romance_juvenil['Imagem_capa']; ?>" class="card-img-top img" alt="...">
+              <p class="fw-bold"><?php echo $row_romance_juvenil['Titulo']; ?></p class="fw-bold">
+              <p class="fw-bold"><?php echo $row_romance_juvenil['Preco']; ?></p class="fw-bold">
             </div>
             <div class="card-body">
-            <a href="?adicionar=<?php echo $key?><button type="button" class="btn btn-primary">Compre</button></a>
+             <button type="button" class="btn btn-primary">Compre</button>
             </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa10.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa11.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa8.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa9.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa7.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa1.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa3.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa6.jpg" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa3.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa2.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary" type="submit">Compre</button>
-            </div>
-          </div>
-          <div class="card card-item-cr" >
-            <div class="card-header">
-              <img src="../assets/img/capa4.webp" class="card-img-top" alt="...">
-              <p class="fw-bold">titulo do card</p class="fw-bold">
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-primary">Compre</button>
-              
-            </div>
-          </div>
+          </div><?php }?>
+         
         </div>
-        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard('card-container', 'card-item-cr')">
+        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
           <i class="fi fi-rr-arrow-small-left"></i>
         </button>
-        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="passCard('next','card-container', 'card-item-cr')">
+        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
           <i class="fi fi-rr-arrow-small-right"></i>
         </button> -->
       </div>
-    </div> 
-   
+    </div>
   </section>
 
 
