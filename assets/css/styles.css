@@ -26,6 +26,10 @@ header, .navbar {
   background-color: #FDD900;
 }
 
+.nav-item{
+  color: #0a0a0a;
+}
+
 #nav-container {
   padding-top: 0;
   padding-bottom: 0;
@@ -37,7 +41,7 @@ header, .navbar {
 
 .navbar-brand {
   padding: 0;
-  color: #0e0e0e;
+  color: #d5d5d5;
 }
 
 .navbar-brand:hover {
@@ -64,7 +68,6 @@ header, .navbar {
   background-color: #0e0e0e;
 
 }
-
 
 /* Slider */
 

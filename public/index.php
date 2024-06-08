@@ -1,9 +1,10 @@
 <?php 
+
+
 include('../app/config.php');
 include('../app/result_livros.php');
 session_start();
-
-
+include('../app/adicionar_produto.php');
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -46,15 +47,14 @@ session_start();
           <input class="form-control me-2" style="min-width:250px;" type="search" placeholder="O que você está procurando? " aria-label="Search">
           <button class="btn btn-outline" type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-          aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" id="home-menu" href="telaLogin.php"> <i class="fi fi-rr-user"></i>Entrar</a>
-            <a class="nav-item nav-link" id="about-menu" href="carrinho.php"> <i class="fi fi-rr-shopping-cart"></i>Carrinho</a>
-            <a class="nav-item nav-link" id="services-menu" href="perfil.php"><i class="fi fi-rs-heart"></i>Meu perfil</a>
+            <a class="nav-item nav-link" id="icon-menu" style="color: #0a0a0a;" href="telaLogin.php"> <i class="fi fi-rr-user"></i>Entrar</a>
+            <a class="nav-item nav-link" id="icon-menu" style="color: #0a0a0a;" href="carrinho.php"> <i class="fi fi-rr-shopping-cart"></i>Carrinho</a>
+            <a class="nav-item nav-link" id="icon-menu" style="color: #0a0a0a;" href="perfil.php"><i class="fi fi-rs-heart"></i>Meu perfil</a>
           </div>
         </div>
       </nav>
@@ -94,39 +94,32 @@ session_start();
     </button>
   </div>
   <!--area dos cards-->
-
-  
-    
-    <?php 
-
-    
-    ?>
  <section>
     <h2>Ficçào Juvenil e Romance</h2>
     <div>
       <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
         <div id="card-container" class="overflow-x-auto">
           <?php 
-           foreach ($resultado_romance_juvenil as $row_romance_juvenil) {
+           foreach ($resultado_romance_juvenil as $row_romance_juvenil => $livro) {
           ?>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="<?php echo $row_romance_juvenil['Imagem_capa']; ?>" class="card-img-top img" alt="...">
-              <p class="fw-bold"><?php echo $row_romance_juvenil['Titulo']; ?></p class="fw-bold">
-              <p class="fw-bold"><?php echo $row_romance_juvenil['Preco']; ?></p class="fw-bold">
+              <img src="<?php echo $livro['Imagem_capa']; ?>" class="card-img-top img" alt="...">
+              <p class="fw-bold"><?php echo $livro['Titulo']; ?></p class="fw-bold">
+              <p class="fw-bold"><?php echo $livro['Preco']; ?></p class="fw-bold">
             </div>
             <div class="card-body">
-             <button type="button" class="btn btn-primary">Compre</button>
+            <form method="post" action="">
+    <!-- Adicione um campo hidden para armazenar o ID do livro -->
+    <input type="hidden" name="ID_livro" value="<?php echo $livro['ID_livro']; ?>">
+   <button class="btn btn-success" type="submit" name="adicionar_carrinho" value="Adicionar ao Carrinho">adicionar ao carrinho</button>
+</form>
             </div>
           </div><?php }?>
+
          
         </div>
-        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
-          <i class="fi fi-rr-arrow-small-left"></i>
-        </button>
-        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
-          <i class="fi fi-rr-arrow-small-right"></i>
-        </button> -->
+    
       </div>
     </div>
   </section>
@@ -140,26 +133,25 @@ session_start();
       <div class="rounded p-5 overflow-hidden" data-bs-loop="true">
         <div id="card-container" class="overflow-x-auto">
           <?php 
-           foreach ($resultado_mangas as $row_mangas) {
+           foreach ($resultado_mangas as $row_mangas => $livro) {
           ?>
           <div class="card card-item-cr" >
             <div class="card-header">
-              <img src="<?php echo $row_mangas['Imagem_capa']; ?>" class="card-img-top img" alt="...">
-              <p class="fw-bold"><?php echo $row_mangas['Titulo']; ?></p class="fw-bold">
-              <p class="fw-bold"><?php echo $row_mangas['Preco']; ?></p class="fw-bold">
+              <img src="<?php echo $livro['Imagem_capa']; ?>" class="card-img-top img" alt="...">
+              <p class="fw-bold"><?php echo $livro['Titulo']; ?></p class="fw-bold">
+              <p class="fw-bold"><?php echo $livro['Preco']; ?></p class="fw-bold">
             </div>
             <div class="card-body">
-             <button type="button" class="btn btn-primary">Compre</button>
+            <form method="post" action="">
+    <!-- Adicione um campo hidden para armazenar o ID do livro -->
+    <input type="hidden" name="ID_livro" value="<?php echo $livro['ID_livro']; ?>">
+    <button class="btn btn-success" type="submit" name="adicionar_carrinho" value="Adicionar ao Carrinho">adicionar ao carrinho</button>
+</form>
             </div>
           </div><?php }?>
          
         </div>
-        <!-- <button class="btn btn-primary" style="margin-top: 20px; margin-right: 50px;" onclick="previousCard()">
-          <i class="fi fi-rr-arrow-small-left"></i>
-        </button>
-        <button class="btn btn-primary" style="position: absolute; right: 0; margin-top: 20px; margin-right: 50px;"  onclick="nextCard()">
-          <i class="fi fi-rr-arrow-small-right"></i>
-        </button> -->
+    
       </div>
     </div>
   </section>
@@ -167,6 +159,7 @@ session_start();
     <div class="container text-light text-center">
       <p class="display-5 mb-3">BookVerse</p>
       <small class="text-white-50">&copy;</small>
+      
     </div>
   </footer>
 

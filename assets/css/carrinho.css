@@ -63,10 +63,10 @@ header, .navbar {
   
   }
 
-#quantidade{
+#quantidade_{
     text-align: center;
     width: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 table th{
     margin-bottom: 100px;
